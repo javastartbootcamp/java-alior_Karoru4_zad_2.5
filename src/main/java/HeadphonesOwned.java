@@ -1,22 +1,11 @@
 public class HeadphonesOwned {
     public static void main(String[] args) {
 
-        Headphones headphones1 = new Headphones();
-        headphones1.producer = "JBL";
-        headphones1.model = "Tune 520BT";
-        headphones1.price = 169.00;
-        headphones1.areWireless = true;
-
-        Headphones headphones2 = new Headphones();
-        headphones2.producer = "Superlux";
-        headphones2.model = "HD681 EVO";
-        headphones2.price = 137.99;
-        headphones2.areWireless = false;
+        Headphones headphones1 = new Headphones("JBL", "Tune 520BT", 169.00, true);
+        Headphones headphones2 = new Headphones("Superlux", "HD681 EVO", 137.99, false);
 
         System.out.println("Posiadane słuchawki:\n");
-        System.out.println("Producent: " + " " + headphones1.producer + ", model" + headphones1.model + ". Cena: "
-                + headphones1.price + "zł " + "\nCzy są bezprzewodowe: " + headphones1.areWireless);
-        System.out.println("Producent: " + " " + headphones2.producer + ", model" + headphones2.model + ". Cena: "
-                + headphones2.price + "zł " + "\nCzy są bezprzewodowe: " + headphones2.areWireless);
+        System.out.println(headphones1.getHeadphonesInfo());
+        System.out.println(headphones2.getHeadphonesInfo());
     }
 }
